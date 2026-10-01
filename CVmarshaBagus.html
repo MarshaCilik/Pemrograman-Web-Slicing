@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Menghubungkan ke file CSS Eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR FIXED -->
+  <header class="header">
+    <div class="logo">
+      <h2>Portofolio<span>.</span></h2>
+    </div>
+
+    <!-- Tombol Hamburger (Tampil di Mobile/HP) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Daftar Menu Navigasi -->
+    <nav class="navbar" id="navbarMenu">
+      <a href="#home" class="nav-link active">About Me</a>
+      <a href="#education" class="nav-link">Pendidikan</a>
+      <a href="#projects" class="nav-link">Karya</a>
+      <a href="#contact" class="nav-link">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main>
+
+    <!-- SECTION HERO / ABOUT ME -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <span class="badge">Halo, Selamat Datang!</span>
+        <h1 class="hero-title">Marsha Hafiz Devara</h1>
+        <p class="hero-subtitle">Mahasiswa Universitas Jember</p>
+        <p class="hero-description">
+          Saya adalah seorang mahasiswa Universitas Jember program studi Teknologi Informasi angkatan 2025
+          yang sedang berfokus pada pembelajaran mengenai ilmu komputer dengan hobi editing video yang menarik.
+          Selamat melihat karya saya!
+        </p>
+
+        <!-- Tombol Aksi -->
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+          <a href="#projects" class="btn btn-outline">Lihat Karya</a>
+        </div>
+      </div>
+
+      <!-- TEMPAT FOTO PROFIL -->
+      <div class="hero-image-container">
+        <div class="photo-frame">
+          <!-- GANTI 'foto-profil.jpg' DENGAN NAMA FILE FOTO ANDA -->
+          <img src="img/marsha.jpeg" alt="Foto Profil Saya" id="profileImage">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION JENJANG PENDIDIKAN -->
+    <section id="education" class="section">
+      <h2 class="section-title">Jenjang Pendidikan</h2>
+      <div class="education-grid">
+        
+        <div class="card">
+          <span class="year">2025 - Sekarang</span>
+          <h3>S1 Teknologi Informasi / Ilmu Komputer</h3>
+          <p class="school-name">Universitas Jember</p>
+          <p>Mempelajari dasar-dasar pemrograman web, struktur data, pengembangan aplikasi dan perangkat hardware.</p>
+        </div>
+
+        <div class="card">
+          <span class="year">2022 - 2025</span>
+          <h3>SMA</h3>
+          <p class="school-name">SMAN 2 JEMBER</p>
+          <p>Mempelajari dasar-dasar mata pelajaran sebagai fondasi utama untuk jenjang kuliah selanjutnya.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION KARYA (VIDEO SHOWCASE) -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Hasil Karya</h2>
+      <div class="projects-grid">
+
+        <!-- KARTU VIDEO KARYA -->
+        <div class="card project-card">
+          <div class="video-container">
+            <!-- TEMPAT VIDEO KARYA ANDA -->
+            <!-- Ganti 'video-karya.mp4' dengan nama file video Anda -->
+            <video controls poster="https://via.placeholder.com/600x340/323232/14FFEC?text=Thumbnail+Video">
+              <source src="img/ppmb.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutaran video.
+            </video>
+          </div>
+          <div class="project-info">        
+            <h3>Motion Graphic</h3>
+            <p>Video di atas merupakan hasil karya motion graphic saya.</p>
+            <div class="tech-tags">
+              <span>After Effect 2023</span>
+              <span>Capcut</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION KONTAK -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Hubungi Saya</h2>
+      <div class="contact-container">
+        
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="nama@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+        </form>
+
+        <!-- Pesan Notifikasi Javascript -->
+        <div id="formStatus" class="form-status"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Portofolio Saya. Dibuat dengan HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <!-- Menghubungkan ke file JavaScript Eksternal -->
+  <script src="scriptCV.js"></script>
+</body>
+</html>
